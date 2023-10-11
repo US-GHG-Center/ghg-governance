@@ -16,31 +16,39 @@
 </tr>
 <tr class="even">
 <td>A1.1.2 Develop touchpoint agreements identified in the data flow diagram</td>
-<td>B1.1.2 Create needed touchpoint agreements such as Interface Control Documents, (ICDs) / Submission Agreement (SA), Memorandum of Understanding (MOU),or Service Level Agreement (SLA). [DS + DE]</td>
+<td>B1.1.2 Create needed touchpoint agreements such as <a href="https://docs.google.com/document/d/1hTrdT2v_D8ThWRjwsVUE_blSNmbwjF2cZrlEltX0gtU/edit"><span class="underline">Interface Control Documents, (ICDs) </span></a> / Submission Agreement (SA), <a href="https://docs.google.com/document/d/12oEjLFqsEsPElqDlEzsW_Km8v4ozuvSd3mckLScGQ7g/edit"><span class="underline">Memorandum of Understanding (MOU)</span></a> or Service Level Agreement (SLA) [DS + DE]</td>
 </tr>
 <tr class="odd">
 <td>A1.1.3 Adhere to community accepted standard machine readable data file formats</td>
-<td><p>B1.1.3 Select standard machine-readable data file format(s) from <a href="https://www.earthdata.nasa.gov/esdis/esco/standards-and-practices#data-formats"><span class="underline">NASA Approved Data Formats</span></a> [DS]</p>
+<td><p>B1.1.3 GHGC Use Case 1:</p>
 <ul>
 <li><blockquote>
-<p>The <a href="https://doi.org/10.5067/DOC/ESO/DPDG_QSG_VERSION1"><span class="underline">EOSDIS Data Product Development Guide for Data Producers - Quick Start Guide</span></a> prefers the following data formats: netCDF-4 and GeoTIFF.</p>
+<p>EPA Methane data delivered in NetCDF</p>
 </blockquote></li>
+<p>GHGC Use Case 2:</p>
 <li><blockquote>
-<p>Cloud Optimized GeoTIFF (COG) and Zarr are the preferred Cloud-based formats</p>
+<p>Gridded CO2 data (format TBD)</p>
 </blockquote></li>
-</ul></td>
+<p>GHGC Use Case 3:</p>
+<li><blockquote>
+<p>Methane plume data from JPL delivered in COG</p>
+</blockquote></li>
+</ul>
+<p>All data ingested into the GHGC system will be transformed into Cloud Optimized GeoTIFF (COG) format which is listed as an emerging standard.</p></td>
 </tr>
 <tr class="even">
 <td>A1.1.4 Identify and document all data product characteristics</td>
-<td>B1.1.4 Create a data sheet using the following template: <a href="https://docs.google.com/document/d/1FqAPO0jwMk7rzxJTkHFuOpwOvHviQDW2/edit#heading=h.gjdgxs"><span class="underline">Data Sheet Template</span></a><em>.</em> Add additional data characteristics as needed for each project. [DS]</td>
+<td>B1.1.4 <blockquote><li><p>The GHGC is collecting data product characteristic information in the following spreadsheet:<a href="https://docs.google.com/spreadsheets/d/199blJH2JBr5eyW-PaH6vCzsj1W8u5AigA4SpjSV04Rc/edit#gid=511491842"><span class="underline"> GHG Center Dataset Information </span></a></blockquote></li></p><p><blockquote><li>In addition, when working with a new data provider, we use the following form to collect dataset information from the provider: <a href="https://docs.google.com/document/d/1B892eXoiirZsw8rylgejNyw1Zh6Fhg1568EOMGUbWIA/edit"><span class="underline"> GHGC Dataset Intake Form Template </span></a></blockquote></li></p>
+ [DS]</td>
 </tr>
 <tr class="odd">
 <td>A1.1.5 Adhere to community best practice(s) on data file naming conventions</td>
-<td>B1.1.5 Define and document file naming conventions using following guidelines: <a href="https://ghrc.nsstc.nasa.gov/home/sites/default/files/GHRC_naming_convention.pdf"><span class="underline">GHRC File Naming convention</span></a> [DS]</td>
+<td>B1.1.5 <blockquote><li><a href="https://docs.google.com/document/d/18GcGJeJBTzY6UH4F_F6s_c3cmvLuUs2TOwpiVaHwoEs/edit"><span class="underline">GHG Center Naming Conventions</span></a></blockquote></li>[DS]</td>
 </tr>
 <tr class="even">
 <td>A1.1.6 Adhere to community standard variable names, types, and unit(s), keywords</td>
-<td>B1.1.6 Utilize standard variable(s), types, and unit(s) such as <a href="http://cfconventions.org/"><span class="underline">CF convention</span> <span class="underline"> </span></a>[DS]</td>
+<td>B1.1.6 Utilize standard variable(s), types, and unit(s) such as <a href="http://cfconventions.org/"><span class="underline">CF convention</span> <span class="underline"></span></a>,<blockquote><li>We are working with what the agencies have provided. We need to understand and communicate the variables and units accurately. Any changes would need approval of the providing agency. 
+</li></blockquote>[DS]</td>
 </tr>
 <tr class="odd">
 <td>A1.1.7 Adhere to community standards for coordinate systems</td>
@@ -85,15 +93,16 @@
 </tr>
 <tr class="even">
 <td>A1.1.8 Adhere to community standards for map projections</td>
-<td>B1.1.8 Utilize map projections from this list (<a href="https://epsg.io/"><span class="underline">https://epsg.io/</span></a>) [DE]</td>
+<td>B1.1.8 Utilize map projections from this list (<a href="https://epsg.io/"><span class="underline">https://epsg.io/</span></a>)<blockquote><li>In most cases, we will keep data as sent to us provided the projection is a standard projection. If we need to transform to another projection, we will use WGS84
+</li></blockquote>[DE]</td>
 </tr>
 <tr class="odd">
 <td>A1.1.9 Adhere to community standards for date and time formats</td>
-<td>B1.1.9 Utilize data and time formatting from <a href="https://www.w3.org/TR/NOTE-datetime"><span class="underline">ISO 8601</span></a> [DE]</td>
+<td>B1.1.9 To maximize interoperability of the data received from the various agencies all received data will be converted to a single date/time standard format. The format used will be<a href="https://www.w3.org/TR/NOTE-datetime"><span class="underline"> ISO 8601</span></a> [DE]</td>
 </tr>
 <tr class="even">
 <td>A1.1.10 Define a data product versioning scheme</td>
-<td>B1.1.10 Represent the data product version with an ordinal identifier (e.g., 1, 2, 3, etc.) that expresses its position in a series of data product publications. The data product version can be represented with both a major and minor version identifier (e.g., 2.1, 2.2, etc.). (Reference: see Section 4.3 of the <a href="https://www.earthdata.nasa.gov/s3fs-public/2022-06/ESDS-RFC-041-DPDG_V1.1-20220516_0.pdf?VersionId=0gPInlDI2oyQMh.RNC3e87qEnwcBdJzm"><span class="underline">Data Product Development Guide for Data Producers</span></a>) [DE]</td>
+<td>B1.1.10 <p><blockquote><li>The data version in use by the providing agency will be used by GHGC when presenting the data</li></blockquote></p><p><blockquote><li>However, there may be cases where no version numbering has been used. In that case we will add V1.0 to the product so that if the data is replaced in the future we have a means to indicate the new version. In our system, decimal numbers indicate minor changes to the product and whole numbers indicate significant product overhaul including algorithm improvements or new data inputs in production.</li></blockquote></p>[DE]</td>
 </tr>
 <tr class="odd">
 <td>A1.1.11 Define a science quality evaluation plan for data products</td>
@@ -229,8 +238,8 @@
 </tr>
 <tr class="even">
 <td>A1.1.16 Determine whether API-based data access is needed &amp; if so, identify an API standard</td>
-<td><p>B1.1.16a Refer to your system design as to whether an API-based data access is needed. [DE] For example, databases that store vector data should have an API.</p>
-<p>B1.1.16b If an API doesn’t already exist for the data being distributed, select an appropriate <a href="https://ogcapi.ogc.org/"><span class="underline">OGC API standard</span></a> to use (also see Requirement A1.4.2). For raster and map content, use <a href="https://ogcapi.ogc.org/maps/"><span class="underline">OGC API - Maps</span></a>. For vector and tile data, use <a href="https://ogcapi.ogc.org/tiles/"><span class="underline">OGC API - Tiles</span></a>. Also consider using <a href="https://ogcapi.ogc.org/features/overview.html"><span class="underline">OGC API - Features</span></a> as needed.[DE]</p></td>
+<td><p>B1.1.16a </p><p><blockquote><li>API-based data access will be provided for the GHGC via the STAC API.</li></blockquote></p>
+<p>B1.1.16</p><p><blockquote><li>The STAC API is fully aligned with <a href="http://docs.opengeospatial.org/is/17-069r3/17-069r3.html"><span class="underline">OGC API-Features</span></a> Version 1.0, and STAC is working to stay aligned as additional OGC API components mature.</li></blockquote></p></td>
 </tr>
 </tbody>
 </table>
