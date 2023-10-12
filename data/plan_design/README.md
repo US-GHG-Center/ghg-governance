@@ -51,6 +51,13 @@
 <p><ul><li><blockquote>&ltdate&gt = in yyyymmdd format; separated by a “_” from the next field.  Four digit years are required 
 <blockquote></li></ul></p>
 <p><ul><ul><li><blockquote>If both start and stop dates are required, then separate the two dates by an underscore.<blockquote></li></ul></ul></p>
+
+<p><ul><li><blockquote>&ltdate-time&gt =  in yyyymmdd-hhmmss format; time is separated by a hyphen from the date.  A “_” separates start and stop dates.   Times should be in UTC.  It is also acceptable to use “T” as a time separator and have “z” at the end of the time field.
+<blockquote></li></ul></p>
+<p><ul><li><blockquote>&ltoptional&gt = any other descriptive information (e.g., channel, band; separate fields with a “_"<blockquote></li></ul></p>
+<p><ul><li><blockquote>&ltversion&gt = optional field: version number use v##.#, where # is 1 or 2 sequential digits and a decimal if desired. 
+<blockquote></li></ul></p>
+<p><ul><li><blockquote>.ext = common 2-3-letter file format description (e.g., .hdf, .jpg, .txt, .gif, .pdf, .asc, .nc, …)<blockquote></li></ul></p>
 </ul>
 </td>
 </tr>
@@ -63,40 +70,8 @@
 <td><p>B1.1.7 Utilize coordinate reference systems (CRS) from this list (<a href="https://epsg.io/"><span class="underline">https://epsg.io/</span></a>) [DE]</p>
 <ul>
 <li><blockquote>
-<p>Recommended global CRS:</p>
+<p>In most cases, we will keep data as sent to us provided the coordinate system is a standard system. If we need to transform to a standard coordinate system, we will use WGS84 </p>
 </blockquote>
-<ul>
-<li><blockquote>
-<p>2-dimensional World Geodetic System 1984 (WGS 84) (Lat/Long): <a href="https://epsg.io/4326"><span class="underline">EPSG:4326</span></a></p>
-</blockquote>
-<ul>
-<li><blockquote>
-<p>WGS 84 World Mercator: <a href="https://epsg.io/3395"><span class="underline">EPSG:3395</span></a></p>
-</blockquote></li>
-<li><blockquote>
-<p>WGS 84 Pseudo-Mercator: <a href="https://epsg.io/3857"><span class="underline">EPSG:3857</span></a></p>
-</blockquote></li>
-</ul></li>
-<li><blockquote>
-<p>3-dimensional WGS 84 (Lat/Long/Elevation)<span class="underline">:</span> <a href="https://epsg.io/4979"><span class="underline">EPSG:4979</span></a></p>
-</blockquote></li>
-</ul></li>
-<li><blockquote>
-<p>Recommended CRS for data over polar regions:</p>
-</blockquote>
-<ul>
-<li><blockquote>
-<p>WGS 84 Arctic Polar Stereographic: <a href="https://epsg.io/3995"><span class="underline">EPSG:3995</span></a></p>
-</blockquote>
-<ul>
-<li><blockquote>
-<p>NSIDC Sea Ice Polar Stereographic North: <a href="https://epsg.io/3413"><span class="underline">EPSG:3413</span></a></p>
-</blockquote></li>
-<li><blockquote>
-<p>NSIDC Sea Ice Polar Stereographic South: <a href="https://epsg.io/3976"><span class="underline">EPSG:3976</span></a></p>
-</blockquote></li>
-</ul></li>
-</ul></li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -245,8 +220,18 @@ Intake reports are also made publicly accessible in the GHGC_docs GitHub reposit
 </tr>
 <tr class="odd">
 <td>A1.1.15 Determine content and format for the dataset landing page</td>
-<td><p>B1.1.15 Design dataset landing page format and content. Recommend using the <a href="https://docs.google.com/document/d/1qEoqYMh6K0QjY4HFqJ55yinwn4u0s22j88IAED583_U/edit?usp=sharing"><span class="underline">IMPACT data product landing page design</span></a>. [DS]</p>
-<p>Note that dataset landing pages can be automatically generated using UMM metadata (published to CMR) and STAC metadata (using STAC Browser). All information needed in the dataset landing page should be included in the metadata.</p></td>
+<td><p>B1.1.15 Landing page:</p>
+<p>Example of current GHG Center dataset landing page:</p><ul><li><blockquote><p><mark>Product Link(when available)</mark></p></blockquote></li></ul>
+<p>The data catalog on the GHGC website will provide access to each dataset landing page. The landing pages will contain, at a minimum, the following information:</p>
+<ul><li><blockquote><p>Data Product Title (Long name)</p></blockquote></li><li><blockquote><p>Data Product Description</p></blockquote></li>
+<li><blockquote><p>Agency and Logo</p></blockquote></li>
+<li><blockquote><p>Data Specs: Temporal/Spatial Extent/Resolution, Data Units, Data Type</p></blockquote></li>
+<li><blockquote><p>Data Version</p></blockquote></li>
+<li><blockquote><p>Source Data Product Citation</p></blockquote></li>
+<li><blockquote><p>Disclaimer Text</p></blockquote></li><ul><li><blockquote><p>If the obtained data product is transformed, then indication of originating data</p></blockquote></li></ul><li><blockquote><p>Key Publications</p></blockquote></li><li><blockquote><p>Other Relevant Publications</p></blockquote></li><li><blockquote><p>Acknowledgements</p></blockquote></li><li><blockquote><p>License</p></blockquote></li><li><blockquote><p>Data Stewardship Document Links</p></blockquote></li>
+</ul>
+
+</td>
 </tr>
 <tr class="even">
 <td>A1.1.16 Determine whether API-based data access is needed &amp; if so, identify an API standard</td>
